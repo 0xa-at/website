@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: isProd ? '/0xa-at/website' : '',
+  assetPrefix: isProd ? '/website' : '',
   images: {
     unoptimized: true,
   },
