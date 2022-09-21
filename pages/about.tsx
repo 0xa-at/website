@@ -1,4 +1,3 @@
 export default function AboutPage() {
-
-    return (<div>About us</div>)
+    return (<div>WIP</div>)
 }
