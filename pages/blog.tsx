@@ -1,3 +1,10 @@
+import { Box, Typography } from "@mui/material";
+import PageHeader from "../components/PageHeader";
+
 export default function BlogPage() {
-    return (<div>WIP</div>)
+    return (
+        <Box>
+            <PageHeader title="Blog" />
+        </Box>
+    )
 }
