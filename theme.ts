@@ -12,6 +12,7 @@ const theme = createTheme({
         },
     },
     typography: {
+        fontFamily: 'Jetbrains Mono',
         button: {
             textTransform: 'none'
         }
