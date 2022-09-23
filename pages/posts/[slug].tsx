@@ -2,7 +2,7 @@ import { Box } from "@mui/material"
 import { useRouter } from "next/router"
 import PostBody from "../../components/PostBody"
 import PostHeader from "../../components/PostHeader"
-import PostType from "../../utils/post"
+import PostType from "../../utils/types"
 import markdownToHtml, { getAllPosts, getPostBySlug } from "../../utils/api"
 
 type Props = {
@@ -19,7 +19,7 @@ export default function PostPage({ post, preview }: Props) {
 
     return (
         <Box>
-            <PostHeader post={post} />
+            <PostHeader title={post.title} author={post.author} date={post.date} />
             <PostBody content={post.content} />
         </Box>
     )

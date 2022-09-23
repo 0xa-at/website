@@ -4,7 +4,7 @@ import { Stack } from "@mui/system";
 import AuthorDetails from "../../components/AuthorDetails";
 import AuthorSocials from "../../components/AuthorSocials";
 import PostPreview from "../../components/PostPreview";
-import PostType from "../../utils/post";
+import PostType from "../../utils/types";
 import { getAllAuthors, getPostsByAuthor } from "../../utils/api";
 
 type Props = {
@@ -62,11 +62,12 @@ export async function getStaticProps({ params }: Params) {
 
 export async function getStaticPaths() {
     const authors = getAllAuthors();
+    console.log(authors);
     return {
         paths: authors.map((author) => {
             return {
                 params: {
-                    name: author,
+                    name: author.id,
                 },
             }
         }),

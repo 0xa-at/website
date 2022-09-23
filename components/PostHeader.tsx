@@ -1,13 +1,18 @@
-import { Link, Typography } from "@mui/material"
+import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
-import PostType from "../utils/post"
 import PostMetadata from "./PostMetadata"
 
-export default function PostHeader({ post }: { post: PostType }) {
+type Props = {
+    title: string
+    date: string
+    author: string
+}
+
+export default function PostHeader({ title, date, author }: Props) {
     return (
         <Box mt={5}>
-            <Typography variant="h4">{post.title}</Typography>
-            <PostMetadata date={post.date} author={post.author} />
+            <Typography variant="h4">{title}</Typography>
+            <PostMetadata date={date} author={author} />
         </Box>
     )
 }
