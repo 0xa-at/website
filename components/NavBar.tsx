@@ -10,7 +10,6 @@ const pages = [
     { name: 'Blog', href: '/blog' },
     { name: 'Talks', href: '/talks' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
 ];
 
 const NavBar = () => {
