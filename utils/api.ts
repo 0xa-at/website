@@ -35,6 +35,10 @@ export function getAllPosts(): PostType[] {
 // Talks
 //
 
+export function getTalksBySpeaker(speaker: string) {
+    return getAllTalks().filter(item => (item.speaker as AuthorType).id === speaker);
+}
+
 export function getTalkById(id: string): TalkType | undefined {
     return getAllTalks().find(t => t.id === id);
 }
@@ -65,15 +69,19 @@ export function getContentById<T>(folder: string, id: string): [T, string] {
 
     data['id'] = fileName;
 
-    // Replace author id with author object
+    console.log("current_dir: ", process.cwd())
+
+    // Replace authorId/speakerId with author object. 
+    // Note: The object seems to be cached somewhere. Once we set the author field, we can't do it again. 
+    //       We can check if we already resolved the author by checking for the id vairable.
+    //
     const authorId = data['author'];
-    if (authorId) {
+    const speakerId = data['speaker'];
+
+    if (authorId && !authorId?.id) {
         data['author'] = getAuthorById(authorId);
     }
-
-    // Same for speaker
-    const speakerId = data['speaker'];
-    if (speakerId) {
+    if (speakerId && !speakerId?.id) {
         data['speaker'] = getAuthorById(speakerId);
     }
 

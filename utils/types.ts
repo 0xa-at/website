@@ -5,12 +5,14 @@ export type AuthorType = {
   description: string
   github?: string
   twitter?: string
+  website?: string
+  linkedin?: string
 }
 
 export type TalkType = {
   id: string
   title: string
-  date: string
+  date: Date
   speaker: string | AuthorType
   youtube: string
   description: string
@@ -21,7 +23,7 @@ export type TalkType = {
 export type PostType = {
   id: string
   title: string
-  date: string
+  date: Date
   author: string | AuthorType
   content: string
 }

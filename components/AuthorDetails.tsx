@@ -1,13 +1,16 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { AuthorType } from "../utils/types";
 
-export default function AuthorDetails() {
+type Props = {
+    author: AuthorType
+}
+
+export default function AuthorDetails({ author }: Props) {
     return (
         <Box>
-            <Typography variant="h5" fontWeight={'bold'}>Max Mustermann</Typography>
-            <Typography variant="subtitle1">Member since: 1.1.2022</Typography>
-            <Typography variant="subtitle1">Role: Software Developer</Typography>
-            <Typography variant="subtitle1">About me: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, neque a varius placerat, mi enim suscipit magna, sit amet tempus sapien odio imperdiet nisl.</Typography>
+            <Typography variant="h5" fontWeight={'bold'}>{author.name}</Typography>
+            <Typography variant="subtitle1">{author.description}</Typography>
         </Box>
     )
 }
