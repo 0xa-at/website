@@ -1,11 +1,12 @@
 import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
+import { AuthorType } from "../utils/types"
 import PostMetadata from "./PostMetadata"
 
 type Props = {
     title: string
     date: string
-    author: string
+    author: AuthorType
 }
 
 export default function PostHeader({ title, date, author }: Props) {

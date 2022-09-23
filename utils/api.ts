@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { AuthorType, TalkType } from './types';
+import PostType, { AuthorType, TalkType } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), '_content');
 const POSTS_DIR = CONTENT_DIR + '/posts'
@@ -15,48 +15,21 @@ const TALKS_DIR = CONTENT_DIR + '/talks'
 // Posts
 // 
 
-export function getPostSlugs() {
-    return fs.readdirSync(POSTS_DIR)
+export function getPostsByAuthor(author: string) {
+    return getAllPosts().filter(item => (item.author as AuthorType).id === author);
 }
 
-export function getPostsByAuthor(author: string, fields: string[] = []) {
-    return getAllPosts(['slug', 'author', ...fields]).filter(item => item.author === author);
+export function getPostById(id: string): PostType | undefined {
+    return getAllPosts().find(p => p.id === id);
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-    const realSlug = slug.replace(/\.md$/, '')
-    const fullPath = path.join(POSTS_DIR, `${realSlug}.md`)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data, content } = matter(fileContents)
-
-    type Items = {
-        [key: string]: string
-    }
-
-    const items: Items = {}
-    fields.forEach((field) => {
-        if (field === 'slug') {
-            items[field] = realSlug
-        }
-        if (field === 'content') {
-            items[field] = content
-        }
-
-        if (typeof data[field] !== 'undefined') {
-            items[field] = data[field]
-        }
+export function getAllPosts(): PostType[] {
+    return fs.readdirSync(POSTS_DIR).map(id => {
+        const [data, content] = getContentById<PostType>(POSTS_DIR, id);
+        return { ...data, content} 
     })
-
-    return items
-}
-
-export function getAllPosts(fields: string[] = []) {
-    const slugs = getPostSlugs()
-    const posts = slugs
-        .map((slug) => getPostBySlug(slug, fields))
-        // sort posts by date in descending order
-        .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-    return posts
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
 // Talks
@@ -73,6 +46,10 @@ export function getAllTalks(): TalkType[] {
 // Authors
 // 
 
+export function getAuthorById(id: string): AuthorType | undefined {
+    return getAllAuthors().find(a => a.id === id);
+}
+
 export function getAllAuthors(): AuthorType[] {
     return fs.readdirSync(AUTHORS_DIR).map(id => getContentById<AuthorType>(AUTHORS_DIR, id)[0]);
 }
@@ -87,6 +64,18 @@ export function getContentById<T>(folder: string, id: string): [T, string] {
     const { data, content } = matter(fileContents)
 
     data['id'] = fileName;
+
+    // Replace author id with author object
+    const authorId = data['author'];
+    if (authorId) {
+        data['author'] = getAuthorById(authorId);
+    }
+
+    // Same for speaker
+    const speakerId = data['speaker'];
+    if (speakerId) {
+        data['speaker'] = getAuthorById(speakerId);
+    }
 
     return [data as T, content];
 }

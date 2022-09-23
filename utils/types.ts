@@ -10,8 +10,8 @@ export type AuthorType = {
 export type TalkType = {
   id: string
   title: string
-  speaker: string
   date: string
+  speaker: string | AuthorType
   youtube: string
   description: string
   slides?: string
@@ -19,15 +19,10 @@ export type TalkType = {
 }
 
 export type PostType = {
-  slug: string
+  id: string
   title: string
   date: string
-  coverImage: string
-  author: string
-  excerpt: string
-  ogImage: {
-    url: string
-  }
+  author: string | AuthorType
   content: string
 }
 

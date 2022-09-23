@@ -1,6 +1,6 @@
 ---
 id: not-matthias
-name: Matthias
+name: Matthias Heiden
 image: todo
 description: No idea what to write here. 
 github: https://github.com/not-matthias

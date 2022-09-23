@@ -1,11 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import PageHeader from "../components/PageHeader";
 import PostPreview from "../components/PostPreview";
-import Post from "../utils/types";
 import { getAllPosts } from "../utils/api";
+import PostType from "../utils/types";
 
 type Props = {
-    allPosts: Post[]
+    allPosts: PostType[]
 }
 
 export default function BlogPage({ allPosts }: Props) {
@@ -14,7 +14,7 @@ export default function BlogPage({ allPosts }: Props) {
             <PageHeader title="Blog" />
 
             {allPosts.map((post) => (
-                <PostPreview key={post.slug} post={post} />
+                <PostPreview key={post.id} post={post} />
             ))}
         </Box>
     )
@@ -23,14 +23,7 @@ export default function BlogPage({ allPosts }: Props) {
 
 
 export const getStaticProps = async () => {
-    const allPosts = getAllPosts([
-        'title',
-        'date',
-        'slug',
-        'author',
-        'coverImage',
-        'excerpt',
-    ])
+    const allPosts = getAllPosts()
 
     return {
         props: { allPosts },

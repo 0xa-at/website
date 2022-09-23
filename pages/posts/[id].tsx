@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import PostBody from "../../components/PostBody"
 import PostHeader from "../../components/PostHeader"
 import PostType from "../../utils/types"
-import markdownToHtml, { getAllPosts, getPostBySlug } from "../../utils/api"
+import markdownToHtml, { getAllPosts, getPostById } from "../../utils/api"
 
 type Props = {
     post: PostType
@@ -12,7 +12,7 @@ type Props = {
 
 export default function PostPage({ post, preview }: Props) {
     const router = useRouter()
-    if (!router.isFallback && !post?.slug) {
+    if (!router.isFallback && !post?.id) {
         // TODO: Redirect to error page
         return (<div>Invalid post</div>)
     }
@@ -28,21 +28,14 @@ export default function PostPage({ post, preview }: Props) {
 
 type Params = {
     params: {
-        slug: string
+        id: string
     }
 }
 
 export async function getStaticProps({ params }: Params) {
-    const post = getPostBySlug(params.slug, [
-        'title',
-        'date',
-        'slug',
-        'author',
-        'content',
-        'ogImage',
-        'coverImage',
-    ])
-    const content = await markdownToHtml(post.content || '')
+    const post = getPostById(params.id)
+    console.log(post);
+    const content = await markdownToHtml(post?.content || '')
 
     return {
         props: {
@@ -55,13 +48,13 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-    const posts = getAllPosts(['slug'])
+    const posts = getAllPosts()
 
     return {
         paths: posts.map((post) => {
             return {
                 params: {
-                    slug: post.slug,
+                    id: post.id,
                 },
             }
         }),
