@@ -62,8 +62,6 @@ export async function getStaticProps({ params }: Params) {
 
 export async function getStaticPaths() {
     const authors = getAllAuthors();
-    console.log(authors);
-
     return {
         paths: authors.map((author) => {
             return {
