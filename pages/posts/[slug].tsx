@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import PostBody from "../../components/PostBody"
 import PostHeader from "../../components/PostHeader"
 import PostType from "../../utils/post"
-import markdownToHtml, { getAllPosts, getPostBySlug } from "../../utils/posts"
+import markdownToHtml, { getAllPosts, getPostBySlug } from "../../utils/api"
 
 type Props = {
     post: PostType
