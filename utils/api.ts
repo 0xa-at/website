@@ -11,7 +11,16 @@ const POSTS_DIR = CONTENT_DIR + '/posts'
 
 export function getPostSlugs() {
     return fs.readdirSync(POSTS_DIR)
-  }
+}
+
+export function getPostsByAuthor(author: string, fields: string[] = []) {
+    return getAllPosts(['slug', 'author', ...fields]).filter(item => item.author === author);
+}
+
+export function getAllAuthors() {
+    // TODO: Remove duplicates? 
+    return getAllPosts(['author']).map(p => p.author);
+}
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
     const realSlug = slug.replace(/\.md$/, '')

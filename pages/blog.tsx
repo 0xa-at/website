@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import PageHeader from "../components/PageHeader";
 import PostPreview from "../components/PostPreview";
 import Post from "../utils/post";
-import { getAllPosts } from "../utils/posts";
+import { getAllPosts } from "../utils/api";
 
 type Props = {
     allPosts: Post[]

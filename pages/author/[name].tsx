@@ -3,8 +3,15 @@ import { grey } from "@mui/material/colors";
 import { Stack } from "@mui/system";
 import AuthorDetails from "../../components/AuthorDetails";
 import AuthorSocials from "../../components/AuthorSocials";
+import PostPreview from "../../components/PostPreview";
+import PostType from "../../utils/post";
+import { getAllAuthors, getPostsByAuthor } from "../../utils/api";
 
-export default function AuthorPage() {
+type Props = {
+    posts: PostType[]
+}
+
+export default function AuthorPage({ posts }: Props) {
     return (
         <Box >
             <Box sx={{ display: 'flex', flexDirection: 'row' }}>
@@ -20,11 +27,51 @@ export default function AuthorPage() {
 
             {/* Recent posts */}
             <Typography variant="h4">Posts</Typography>
-            <Typography variant="subtitle1">No recent posts found</Typography>
+            {posts.map(post => (
+                <PostPreview key={post.slug} post={post} />
+            ))}
 
             {/* Recent talks */}
             <Typography variant="h4">Talks</Typography>
             <Typography variant="subtitle1">No recent talks found</Typography>
         </Box >
     )
+}
+
+type Params = {
+    params: {
+        name: string
+    }
+}
+
+export async function getStaticProps({ params }: Params) {
+    const posts = getPostsByAuthor(params.name, [
+        'title',
+        'date',
+        'slug',
+        'author',
+        'content',
+    ])
+
+    return {
+        props: {
+            posts
+        },
+    }
+}
+
+export async function getStaticPaths() {
+    const authors = getAllAuthors();
+    console.log(authors);
+
+    return {
+        paths: authors.map((author) => {
+            return {
+                params: {
+                    name: author,
+                },
+            }
+        }),
+        fallback: false,
+    }
 }
