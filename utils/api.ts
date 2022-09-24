@@ -69,8 +69,6 @@ export function getContentById<T>(folder: string, id: string): [T, string] {
 
     data['id'] = fileName;
 
-    console.log("current_dir: ", process.cwd())
-
     // Replace authorId/speakerId with author object. 
     // Note: The object seems to be cached somewhere. Once we set the author field, we can't do it again. 
     //       We can check if we already resolved the author by checking for the id vairable.

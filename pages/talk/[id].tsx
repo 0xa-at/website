@@ -2,13 +2,13 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system"
 import PostHeader from "../../components/PostHeader"
 import { getAllTalks, getTalkById } from "../../utils/api"
-import { TalkType } from "../../utils/types"
+import { AuthorType, TalkType } from "../../utils/types"
 
 export default function TalkPage({ talk }: { talk: TalkType }) {
     const videoUrl = talk.youtube.replace('youtube.com/watch?v=', 'youtube-nocookie.com/embed/') + '?rel=0';
     return (
         <Box>
-            <PostHeader title={talk.title} author={talk.speaker} date={talk.date} />
+            <PostHeader title={talk.title} author={talk.speaker as AuthorType} date={talk.date} />
 
             <Box pt={3}>
                 <iframe

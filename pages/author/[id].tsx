@@ -15,7 +15,6 @@ type Props = {
 }
 
 export default function AuthorPage({ author, posts, talks }: Props) {
-    console.log()
     return (
         <Box >
             <Box pb={3} pt={3} sx={{ display: 'flex', flexDirection: 'row' }}>

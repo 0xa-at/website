@@ -5,7 +5,7 @@ import PostMetadata from "./PostMetadata"
 
 type Props = {
     title: string
-    date: string
+    date: Date
     author: AuthorType
 }
 
