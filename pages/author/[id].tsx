@@ -1,4 +1,4 @@
-import { Avatar, Box, Divider, Typography } from "@mui/material";
+import { Avatar, Box, Divider, Typography, useMediaQuery } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { Stack } from "@mui/system";
 import AuthorDetails from "../../components/AuthorDetails";
@@ -15,12 +15,16 @@ type Props = {
 }
 
 export default function AuthorPage({ author, posts, talks }: Props) {
+    const isMobile = useMediaQuery('(max-width:600px)');
+
     return (
         <Box >
             <Box pb={3} pt={3} sx={{ display: 'flex', flexDirection: 'row' }}>
-                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                    <Avatar sx={{ bgcolor: grey[500], width: 150, height: 150 }} />
-                </Box>
+                {!isMobile &&
+                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+                        <Avatar sx={{ bgcolor: grey[500], width: 150, height: 150 }} />
+                    </Box>
+                }
 
                 <Stack direction="column" spacing={2} p={5}>
                     <AuthorDetails author={author} />

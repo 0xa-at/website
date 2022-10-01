@@ -10,9 +10,9 @@ export default function TalkPage({ talk }: { talk: TalkType }) {
         <Box>
             <PostHeader title={talk.title} author={talk.speaker as AuthorType} date={talk.date} />
 
-            <Box pt={3}>
+            <Box pt={3} >
                 <iframe
-                    width="80%"
+                    width={'100%'}
                     height="500px"
                     src={videoUrl}
                     title="YouTube video player"
