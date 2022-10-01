@@ -27,7 +27,6 @@ const NavBar = () => {
                         sx={{
                             mr: 2,
                             display: 'flex',
-                            fontFamily: 'monospace',
                             fontWeight: 900,
                             fontSize: '2rem',
                             color: 'inherit',
