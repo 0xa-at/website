@@ -24,6 +24,12 @@ export default function AboutPage() {
                 <Person name={"Alexander Brunner"} role={"Accountant"} />
                 <Person name={"Tobias Pucher"} role={"Accountant deputy"} />
             </Box>
+
+            <Typography pt={3} variant="h4">Imprint</Typography>
+            <Typography variant="body1">0xA Science Association - Verein zur Förderung von Wissenschaft und Technik in der Gesellschaft</Typography>
+            <Typography variant="body1">ZVR: 1009399442</Typography>
+
+
         </Box>
     )
 }
