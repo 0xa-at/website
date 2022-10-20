@@ -14,6 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <NavBar />
 
     <Container sx={{ height: '100%' }} >
+      <script data-goatcounter="https://0xa.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
       <Component {...pageProps} />
     </Container>
   </ThemeProvider>)
