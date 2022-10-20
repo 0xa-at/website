@@ -5,18 +5,19 @@ import NavBar from '../components/NavBar'
 import { ThemeProvider } from '@emotion/react'
 import theme from '../theme'
 import 'jetbrains-mono'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  console.log(router.query.hideNav !== undefined);
+
   return (<ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
 
-    <NavBar />
+    {router.query.hideNav === undefined && <NavBar />}
 
     <Container sx={{ height: '100%' }} >
-      <script data-goatcounter="https://0xa.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-
       <Component {...pageProps} />
     </Container>
   </ThemeProvider>)
