@@ -5,17 +5,19 @@ import NavBar from '../components/NavBar'
 import { ThemeProvider } from '@emotion/react'
 import theme from '../theme'
 import 'jetbrains-mono'
-import { GCScript } from "next-goatcounter";
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  console.log(router.query.hideNav !== undefined);
+
   return (<ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
 
-    <NavBar />
+    {router.query.hideNav === undefined && <NavBar />}
 
     <Container sx={{ height: '100%' }} >
-      <GCScript siteUrl={"https://0xa.goatcounter.com/count"} scriptSrc={"//gc.zgo.at/count.js"} />
       <Component {...pageProps} />
     </Container>
   </ThemeProvider>)
