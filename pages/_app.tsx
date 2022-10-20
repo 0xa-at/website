@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar'
 import { ThemeProvider } from '@emotion/react'
 import theme from '../theme'
 import 'jetbrains-mono'
+import { GCScript } from "next-goatcounter";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (<ThemeProvider theme={theme}>
@@ -14,9 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <NavBar />
 
     <Container sx={{ height: '100%' }} >
-      <script data-goatcounter="https://0xa.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-
+      <GCScript siteUrl={"https://0xa.goatcounter.com/count"} scriptSrc={"//gc.zgo.at/count.js"} />
       <Component {...pageProps} />
     </Container>
   </ThemeProvider>)
