@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 
 const pages = [
+    { name: 'Events', href: '/events' },
     { name: 'Blog', href: '/blog' },
     { name: 'Talks', href: '/talks' },
     { name: 'About', href: '/about' },
