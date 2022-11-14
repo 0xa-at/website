@@ -27,7 +27,7 @@ export default function BillboardPage() {
             </Typography>
 
             <Box>
-                <Image src="0xa-qr.svg" alt="Code Image" width={"500px"} height={"500px"} style={{}} />
+                <Image src="0xa-qr.svg" alt="Code Image" width={500} height={500} />
             </Box>
         </Box>
 
