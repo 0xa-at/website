@@ -5,12 +5,13 @@ import path from 'path';
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import PostType, { AuthorType, TalkType } from './types';
+import PostType, { AuthorType, EventType, TalkType } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), '_content');
 const POSTS_DIR = CONTENT_DIR + '/posts'
 const AUTHORS_DIR = CONTENT_DIR + '/authors'
 const TALKS_DIR = CONTENT_DIR + '/talks'
+const EVENTS_DIR = CONTENT_DIR + '/events'
 
 // Posts
 // 
@@ -56,6 +57,25 @@ export function getAuthorById(id: string): AuthorType | undefined {
 
 export function getAllAuthors(): AuthorType[] {
     return fs.readdirSync(AUTHORS_DIR).map(id => getContentById<AuthorType>(AUTHORS_DIR, id)[0]);
+}
+
+// Events
+//
+
+export function getUpcomingEvents(): EventType[] {
+    return getAllEvents().filter(event => new Date(event.date) > new Date());
+}
+
+export function getPastEvents(): EventType[] {
+    return getAllEvents().filter(event => new Date(event.date) < new Date());
+}
+
+export function getEventById(id: string): EventType | undefined {
+    return getAllEvents().find(e => e.id === id);
+}
+
+export function getAllEvents(): EventType[] {
+    return fs.readdirSync(EVENTS_DIR).map(id => getContentById<EventType>(EVENTS_DIR, id)[0]);
 }
 
 // Misc

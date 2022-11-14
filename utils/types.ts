@@ -28,4 +28,12 @@ export type PostType = {
   content: string
 }
 
+export type EventType = {
+  id: string
+  title: string
+  date: string
+  link: string
+  image: string
+}
+
 export default PostType
