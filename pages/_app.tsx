@@ -9,7 +9,6 @@ import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  console.log(router.query.hideNav !== undefined);
 
   return (<ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

@@ -1,6 +1,6 @@
 ---
 title: Hello from 0xA
-date: 28.9.2022
+date: 2022-09-28
 author: not-matthias
 ---
 
