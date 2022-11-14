@@ -11,8 +11,6 @@ type Props = {
 export async function getStaticProps() {
   const upcomingEvents = getUpcomingEvents();
   const pastEvents = getPastEvents();
-  console.log(upcomingEvents);
-  console.log(pastEvents);
   return {
     props: {
       upcomingEvents,
@@ -23,8 +21,6 @@ export async function getStaticProps() {
 
 export default function HomePage(props: Props) {
   const isMobile = useMediaQuery('(max-width:600px)');
-
-  console.log(props);
 
   return (
     <Box>
@@ -46,7 +42,7 @@ export default function HomePage(props: Props) {
         </Typography>
       </Box>
 
-      <Box pt={10}>
+      <Box pt={10} pb={5}>
         {/* Upcoming events */}
         <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
           Upcoming Events
