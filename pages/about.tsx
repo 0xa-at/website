@@ -28,7 +28,7 @@ export default function AboutPage() {
             {/* Imprint */}
             <Typography pt={5} variant="h4">Imprint</Typography>
             <Typography pt={2} variant="h5">Media Owner</Typography>
-            <Typography variant="body1">0xA - Science Association</Typography>
+            <Typography variant="body1">0xA Science Association</Typography>
             <Typography variant="body1">Julius-Raab-Straße 10</Typography>
             <Typography variant="body1"> 4040 Linz</Typography>
 
