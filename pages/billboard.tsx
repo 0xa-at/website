@@ -1,4 +1,4 @@
-import { Box, Divider, Typography, useMediaQuery } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 
 export default function BillboardPage() {
