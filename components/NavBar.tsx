@@ -20,7 +20,14 @@ const NavBar = () => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Width = Height * 2.27 */}
-                    <Image src={'logo-white.png'} width={90} height={40} alt={"0xA Logo"} />
+                    <Image
+                        style={{ cursor: 'pointer' }}
+                        src={'logo-white.png'}
+                        width={90}
+                        height={40}
+                        alt="0xA Logo"
+                        onClick={() => router.push('/')}
+                    />
 
                     {/* Header Items */}
                     <Box sx={{
