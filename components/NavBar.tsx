@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const pages = [
@@ -19,22 +20,8 @@ const NavBar = () => {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: 'flex',
-                            fontWeight: 900,
-                            fontSize: '2rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        0xA
-                    </Typography>
+                    {/* Width = Height * 2.27 */}
+                    <Image src={'logo-white.png'} width={90} height={40} alt={"0xA Logo"} />
 
                     {/* Header Items */}
                     <Box sx={{
