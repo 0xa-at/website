@@ -6,6 +6,7 @@ import { ThemeProvider } from '@emotion/react'
 import theme from '../theme'
 import 'jetbrains-mono'
 import { useRouter } from 'next/router'
+import Footer from '../components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -18,7 +19,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     <Container sx={{ height: '100%' }} >
       <Component {...pageProps} />
+
+      <Footer />
     </Container>
+
   </ThemeProvider>)
 }
 
