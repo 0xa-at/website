@@ -34,6 +34,10 @@ export type EventType = {
   date: string
   link: string
   image: string
+  hidden?: boolean
+
+  location: string
+  description: string
 }
 
 export default PostType

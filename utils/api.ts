@@ -63,11 +63,11 @@ export function getAllAuthors(): AuthorType[] {
 //
 
 export function getUpcomingEvents(): EventType[] {
-    return getAllEvents().filter(event => new Date(event.date) > new Date());
+    return getAllEvents().filter(event => new Date(event.date) > new Date() && !event.hidden);
 }
 
 export function getPastEvents(): EventType[] {
-    return getAllEvents().filter(event => new Date(event.date) < new Date());
+    return getAllEvents().filter(event => new Date(event.date) < new Date() && !event.hidden);
 }
 
 export function getEventById(id: string): EventType | undefined {
