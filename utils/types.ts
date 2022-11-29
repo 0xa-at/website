@@ -38,6 +38,7 @@ export type EventType = {
 
   location: string
   description: string
+  register_link: string
 }
 
 export default PostType

@@ -30,17 +30,21 @@ export default function EventSidebar({ event }: Props) {
                         {event.location}
                     </Typography>
 
-                    <Divider sx={{ my: 2 }} />
-
                     {/* Link */}
-                    <Typography variant="h6" style={{ fontWeight: 'bold' }}>
-                        Link
-                    </Typography>
-                    <Typography variant="body1">
-                        <Link href={event.link} color="inherit">
-                            Sign Up
-                        </Link>
-                    </Typography>
+                    {event.register_link &&
+                        <>
+                            <Divider sx={{ my: 2 }} />
+
+                            <Typography variant="h6" style={{ fontWeight: 'bold' }}>
+                                Link
+                            </Typography>
+                            <Typography variant="body1">
+                                <Link href={event.register_link} color="inherit">
+                                    Sign Up
+                                </Link>
+                            </Typography>
+                        </>
+                    }
                 </Box>
             </Paper>
         </Box>
