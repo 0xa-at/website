@@ -23,7 +23,7 @@ export default function AuthorPage({ event }: Props) {
 
             <Box display="flex" flexDirection={isMobile ? 'column' : 'row'} mt={4}>
                 <Box flex={1} mr={isMobile ? 0 : 4}>
-                    <Typography variant="body1" >
+                    <Typography variant="body1" style={{ whiteSpace: 'pre-line' }}>
                         {event.description}
                     </Typography>
                 </Box>
@@ -43,6 +43,8 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
     const event = getEventById(params.id)
+    // event.description = await markdownToHtml(event.description);
+    console.log(event.description);
     return {
         props: {
             event,
