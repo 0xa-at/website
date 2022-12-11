@@ -31,6 +31,28 @@ export default function AuthorPage({ event }: Props) {
                 <EventSidebar event={event} />
             </Box>
 
+            <Box>
+                <Typography variant="h4" style={{ fontWeight: 'bold' }}>
+                    Speakers
+                </Typography>
+                <Box display="flex" flexDirection={isMobile ? 'column' : 'row'} mt={4}>
+                </Box>
+
+                <Typography variant="h4" style={{ fontWeight: 'bold' }}>
+                    Sponsors
+                </Typography>
+                <Box display="flex" flexDirection={isMobile ? 'column' : 'row'} mt={4}>
+                    {/* Vielen Dank an <Firma> fuer die Unterstuetzung (siehe: https://technologieplauscherl.at/77/) */}
+                </Box>
+
+                <Typography variant="h4" style={{ fontWeight: 'bold' }}>
+                    Recordings
+                </Typography>
+
+                <Typography variant="h4" style={{ fontWeight: 'bold' }}>
+                    Pictures
+                </Typography>
+            </Box>
         </Box >
     )
 }
