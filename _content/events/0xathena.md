@@ -31,6 +31,7 @@ sponsors:
 - 
   name: Cloudflight
   link: https://cloudflight.io/
+  logo: /sponsors/cloudflight.svg
 - 
   name: Grand Garage
   link: https://grandgarage.eu/

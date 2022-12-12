@@ -31,6 +31,7 @@ export type PostType = {
 export type SponsorType = {
   name: string
   link: string
+  logo: string | undefined
 }
 
 export type ScheduleType = {
