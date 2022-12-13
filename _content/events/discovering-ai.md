@@ -17,5 +17,5 @@ description: Am 22. November 2022 um 18:00 veranstalten die Vereine uniforce con
 
     Wir freuen uns auf dich!🚀
 
-recording: https://www.youtube.com/watch?v=n-l9wGBEq_o
+recording: https://www.youtube.com/embed/n-l9wGBEq_o
 ---
