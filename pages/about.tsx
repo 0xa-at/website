@@ -32,7 +32,8 @@ export default function AboutPage() {
       <Typography pt={2} variant="h5">Media Owner</Typography>
       <Typography variant="body1">0xA Science Association</Typography>
       <Typography variant="body1">Julius-Raab-Straße 10</Typography>
-      <Typography variant="body1"> 4040 Linz</Typography>
+      <Typography variant="body1">4040 Linz</Typography>
+      <Typography variant="body1">Mail: office ~ at ~ 0xa.at </Typography>
 
       <Typography pt={2} variant="h5">Line of Business</Typography>
       <Typography variant="body1">0xA Science Association - Verein zur Förderung von Wissenschaft und Technik in der Gesellschaft</Typography>
