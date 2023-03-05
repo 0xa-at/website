@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Container, CssBaseline } from '@mui/material'
+import { Box, Container, CssBaseline } from '@mui/material'
 import NavBar from '../components/NavBar'
 import { ThemeProvider } from '@emotion/react'
 import theme from '../theme'
@@ -15,13 +15,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
 
-    {router.query.hideNav === undefined && <NavBar />}
+    <Box sx={{
+      display: 'flex', flexDirection: 'column', minHeight: '100vh'
+    }}>
+      {router.query.hideNav === undefined && <NavBar />}
 
-    <Container sx={{ height: '100%' }} >
-      <Component {...pageProps} />
+      <Container sx={{ flexGrow: 5 }}>
+        <Component {...pageProps} />
+      </Container>
 
       <Footer />
-    </Container>
+    </Box>
 
   </ThemeProvider>)
 }
