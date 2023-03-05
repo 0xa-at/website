@@ -37,3 +37,7 @@ next-env.d.ts
 
 # Nix
 .direnv/
+# Devenv
+.devenv*
+devenv.local.nix
+
