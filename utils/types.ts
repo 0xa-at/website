@@ -28,6 +28,18 @@ export type PostType = {
   content: string
 }
 
+export type SponsorType = {
+  name: string
+  link: string
+  logo: string | undefined
+}
+
+export type ScheduleType = {
+  title: string
+  description: string
+  speaker: string | AuthorType
+}
+
 export type EventType = {
   id: string
   title: string
@@ -36,8 +48,15 @@ export type EventType = {
   image: string
   hidden?: boolean
 
+  schedule: ScheduleType[]
+  sponsors: SponsorType[]
   location: string
   description: string
+  register_link: string
+
+  // Added after the event
+  recording: string
+  pictures: string[]
 }
 
 export default PostType

@@ -1,7 +1,7 @@
 ---
 title: Discovering Artificial Intelligence
 date: 2022-11-22 18:00
-link: https://www.eventbrite.de/e/discovering-artificial-intelligence-tickets-467400205597
+link: /events/discovering-ai
 image: https://user-images.githubusercontent.com/26800596/201693314-6289d03a-f742-407b-b200-989af8b322e6.png
 
 location: JKU Linz
@@ -16,4 +16,6 @@ description: Am 22. November 2022 um 18:00 veranstalten die Vereine uniforce con
     Die Keynotes werden auch online übertragen! Falls du online dabei sein möchtest, schreib uns eine Nachricht bei deiner Anmeldung und wir schicken dir den Link.
 
     Wir freuen uns auf dich!🚀
+
+recording: https://www.youtube.com/embed/n-l9wGBEq_o
 ---
