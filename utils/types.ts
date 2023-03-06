@@ -32,6 +32,7 @@ export type SponsorType = {
   name: string
   link: string
   logo: string | undefined
+  invertLogo?: boolean
 }
 
 export type ScheduleType = {

@@ -5,11 +5,24 @@ link: /events/qc
 image: https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 
 location: JKU Linz, Open Innovation Center
-description: We're excited to announce our upcoming event "Quantum Computing - From Theory to Practice" on March 28th, in cooperation with LIT - Open Innovation Center. This event will feature three talks focused on Quantum Computing and take place at the Stufenforum/OIC. 
+description: We are thrilled to announce our highly anticipated event, "Quantum Computing - From Theory to Practice", which is scheduled to take place on March 28th in partnership with LIT - Open Innovation Center. This event will be held at the Stufenforum/OIC and will feature three enlightening talks centered around Quantum Computing.
 
 
-    The first talk will be a brief introduction to the topic by Alexander Peherstorfer, which will provide a foundation for the audience to understand the more complex concepts that will be discussed later in the evening. The second talk, given by Richard Küng, will delve deeper into specific concepts related to Quantum Computing and provide a more detailed understanding of the topic. Finally, the third talk will be given by a speaker from IBM, Elisa Bäumer, who will discuss practical applications of Quantum Computing. More specific information on the given talks will follow soon.
+    The first talk, presented by Alexander Peherstorfer, will provide a brief introduction to the topic, laying the foundation for the audience to comprehend the more intricate concepts that will be discussed later in the evening. The second talk, delivered by Prof. Richard Küng, will delve deeper into particular concepts relevant to Quantum Computing and provide a more detailed understanding of the subject.
 
 
-    Overall, these talks aim to provide a comprehensive overview of Quantum Computing and its potential applications. Attendees will come away with a greater understanding of this exciting and rapidly evolving field, as well as insights into how Quantum Computing may impact their lives in the near future. Don't miss this opportunity to expand your knowledge and network with like-minded individuals. The event will take place at the Stufenforum/OIC. We look forward to seeing you there!
+    The third talk will be presented by Elisa Bäumer from IBM, who will offer valuable insights into the practical aspects of Quantum Computing. Elisa will explore the programming of quantum computers, the kinds of issues they may potentially solve, and the current challenges that need to be addressed. Attendees will gain a deeper understanding of Quantum Computing and its potential applications, as well as invaluable insights into the practical aspects of this exciting and rapidly evolving field.
+
+
+    Following the talks, attendees will have the opportunity to network with like-minded individuals while enjoying catering services. This event aims to provide a comprehensive overview of Quantum Computing, from theory to practice. This is an unmissable opportunity to expand your knowledge and establish new, valuable connections. Join us at the Stufenforum/OIC on March 28th, we look forward to seeing you there!
+
+sponsors: 
+- 
+  name: LIT Open Innovation Center
+  link: https://www.jku.at/lit-open-innovation-center/
+  logo: /sponsors/lit-oic-blue.png
+- 
+  name: Fivesquare
+  link: https://fivesquare.ai/
+  logo: /sponsors/fivesquare-black.svg
 ---

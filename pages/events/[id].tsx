@@ -66,11 +66,15 @@ export default function AuthorPage({ event }: Props) {
                         </Typography>
 
                         {event.sponsors.map((sponsor) => (
-                            <Box key={sponsor.name}>
+                            <Box key={sponsor.name} py={1}>
                                 <Link href={sponsor.link} target="_blank" rel="noopener noreferrer">
                                     {sponsor.logo ? (
                                         <Box ml={1}>
-                                            <Image src={sponsor.logo} alt={sponsor.name} width={200} height={200} style={{ filter: "invert(100%)" }} />
+                                            <Image src={sponsor.logo} alt={sponsor.name}
+                                                width={200}
+                                                height={200}
+                                                style={{ height: "100%", filter: sponsor.invertLogo ? "invert(100%)" : 'none' }}
+                                            />
                                         </Box>
                                     ) : sponsor.name}
                                 </Link>

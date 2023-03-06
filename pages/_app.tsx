@@ -24,7 +24,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Container>
 
-      <Footer />
+      <Box pt={3}>
+        <Footer />
+      </Box>
     </Box>
 
   </ThemeProvider>)
