@@ -46,7 +46,7 @@ export default function Footer() {
                         <Typography variant="h5" sx={{ fontWeight: 'bold', pb: 1 }}>Social</Typography>
 
                         {socials.map((social) => (
-                            <Link href={social.href} color="inherit">
+                            <Link href={social.href} color="inherit" key={social.name}>
                                 <IconButton aria-label={social.name} sx={{ color: 'white' }} >
                                     <FontAwesomeIcon icon={social.icon} size='2x' />
                                 </IconButton>
