@@ -55,7 +55,10 @@ export default function Footer() {
 
                         {/* Sponsored by */}
                         <Typography variant="h5" sx={{ fontWeight: 'bold', pt: 3, pb: 1 }}>Sponsored by</Typography>
-                        TBA
+                        <Link href="https://fivesquare.ai" target="_blank" rel="noopener noreferrer">
+                            <Image src="/sponsors/fivesquare.svg" alt="Fivesquare" width={200} height={40} />
+                        </Link>
+
                     </Grid>
                 </Grid>
             </Container>
