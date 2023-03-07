@@ -25,4 +25,5 @@ sponsors:
   name: Fivesquare
   link: https://fivesquare.ai/
   logo: /sponsors/fivesquare-black.svg
+register_link: https://pretix.eu/0xa/qc/
 ---
