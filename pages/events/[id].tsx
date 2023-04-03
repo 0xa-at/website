@@ -3,6 +3,7 @@ import Image from "next/image";
 import EventSidebar from "../../components/EventSidebar";
 import { getAllEvents, getEventById } from "../../utils/api";
 import { EventType } from "../../utils/types";
+import ImageCarousel from "../../components/ImageCarousel";
 
 type Props = {
     event: EventType,
@@ -113,22 +114,15 @@ export default function AuthorPage({ event }: Props) {
                 {/* Pictures */}
                 {event.pictures && event.pictures.length > 0 && (
                     <Box mt={4}>
-                        <Typography variant="h4" style={{ fontWeight: 'bold' }}>
+                        <Typography variant="h4" style={{ fontWeight: 'bold' }} mb={1}>
                             Pictures
                         </Typography>
 
-                        <Box display="flex" flexWrap="wrap" mt={1}>
-                            {event.pictures.map((picture) => (
-                                <Box key={picture} mr={1} mb={1}>
-                                    <Image src={picture} alt="Event" style={{ width: '100%' }} />
-                                </Box>
-                            )
-                            )}
-                        </Box>
+                        <ImageCarousel images={event.pictures} />
                     </Box>
                 )}
             </Box>
-        </Box>
+        </Box >
     )
 }
 
