@@ -17,7 +17,7 @@ export default function ImageCarousel(props: Props) {
         >
             {
                 props.images.map((link, i) =>
-                    <Box key={i} height={'70vh'} position={"relative"}>
+                    <Box key={i} height={'60vh'} position={"relative"}>
                         <Image src={link} alt="Code Image" fill style={{ objectFit: "cover" }} />
                     </Box>
                 )
