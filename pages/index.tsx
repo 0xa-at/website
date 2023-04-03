@@ -23,13 +23,12 @@ export async function getStaticProps() {
 export default function HomePage(props: Props) {
   const isMobile = useMediaQuery('(max-width:600px)');
   const images = [
-    "images/qc/DSC_2713.jpg",
-    "images/qc/DSC_2729.jpg",
     "images/qc/DSC_2731.jpg",
+    "images/qc/DSC_2875.jpg",
     "images/qc/DSC_2759.jpg",
-    "images/qc/DSC_2783.jpg",
-    "images/qc/DSC_2801.jpg",
+    "images/qc/DSC_2776.jpg",
     "images/qc/DSC_2819.jpg",
+    "images/qc/DSC_2825.jpg",
   ];
 
   return (

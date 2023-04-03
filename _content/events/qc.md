@@ -28,5 +28,22 @@ sponsors:
 register_link: https://pretix.eu/0xa/qc/
 
 pictures: 
+  - /images/qc/DSC_2731.jpg
   - /images/qc/DSC_2713.jpg
+  - /images/qc/DSC_2734.jpg
+  - /images/qc/DSC_2740.jpg
+  - /images/qc/DSC_2751.jpg
+  - /images/qc/DSC_2759.jpg
+  - /images/qc/DSC_2776.jpg
+  - /images/qc/DSC_2797.jpg
+  - /images/qc/DSC_2801.jpg
+  - /images/qc/DSC_2811.jpg
+  - /images/qc/DSC_2819.jpg
+  - /images/qc/DSC_2825.jpg
+  - /images/qc/DSC_2846.jpg
+  - /images/qc/DSC_2875.jpg
+  - /images/qc/DSC_2893.jpg
+  - /images/qc/DSC_2914.jpg
+  - /images/qc/DSC_2924.jpg
+  - /images/qc/DSC_2951.jpg
 ---
