@@ -43,7 +43,12 @@ export default function HomePage(props: Props) {
           Upcoming Events
         </Typography>
 
-        <EventsPanel events={props.upcomingEvents} />
+        {props.upcomingEvents.length > 1 ?
+          <EventsPanel events={props.upcomingEvents} />
+          : <Typography variant="body1" mt={1}>
+            To be announced
+          </Typography>
+        }
 
         {/* Past events */}
         <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
