@@ -1,7 +1,8 @@
-import { Box, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, Paper, Typography, useMediaQuery } from '@mui/material';
 import EventsPanel from '../components/EventsPanel';
 import { getPastEvents, getUpcomingEvents } from '../utils/api';
 import { EventType } from '../utils/types';
+import ImageCarousel from '../components/ImageCarousel';
 
 type Props = {
   upcomingEvents: EventType[];
@@ -21,28 +22,22 @@ export async function getStaticProps() {
 
 export default function HomePage(props: Props) {
   const isMobile = useMediaQuery('(max-width:600px)');
+  const images = [
+    "images/qc/DSC_2731.jpg",
+    "images/qc/DSC_2875.jpg",
+    "images/qc/DSC_2759.jpg",
+    "images/qc/DSC_2776.jpg",
+    "images/qc/DSC_2819.jpg",
+    "images/qc/DSC_2825.jpg",
+  ];
 
   return (
     <Box>
-      <Box pt={6} sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        height: '100%'
-      }}>
-        <Typography variant="h1" sx={{
-          fontSize: isMobile ? '40vw' : '15rem',
-          fontWeight: 'bold',
-        }}>
-          0xA
-        </Typography>
-        <Typography variant="h3" sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '-1em' }}>
-          Science Association
-        </Typography>
+      <Box pt={3}>
+        <ImageCarousel images={images} />
       </Box>
 
-      <Box pt={10} pb={5}>
+      <Box mt={-5} pt={0} pb={5}>
         {/* Upcoming events */}
         <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
           Upcoming Events

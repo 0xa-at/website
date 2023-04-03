@@ -75,7 +75,9 @@ export function getEventById(id: string): EventType | undefined {
 }
 
 export function getAllEvents(): EventType[] {
-    return fs.readdirSync(EVENTS_DIR).map(id => getContentById<EventType>(EVENTS_DIR, id)[0]);
+    return fs.readdirSync(EVENTS_DIR)
+        .map(id => getContentById<EventType>(EVENTS_DIR, id)[0])
+        .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
 // Misc

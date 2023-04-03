@@ -19,12 +19,13 @@ export default function EventPreview(props: Props) {
 
     return (
         <Paper variant="outlined" sx={{ height: "100%" }}>
-            <CardActionArea sx={{ height: "100%" }} onClick={handleClick}>
+            <CardActionArea onClick={handleClick}>
                 <CardMedia
                     component="img"
                     height="100"
                     image={props.image}
                     alt={props.title}
+                    style={{ objectFit: "cover" }}
                 />
 
                 <CardContent>
