@@ -27,6 +27,7 @@ sponsors:
   logo: /sponsors/fivesquare-black.svg
 register_link: https://pretix.eu/0xa/qc/
 
+recording: https://www.youtube.com/embed/kz2PPRDne2U
 pictures: 
   - /images/qc/DSC_2731.jpg
   - /images/qc/DSC_2713.jpg
