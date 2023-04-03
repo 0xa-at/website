@@ -43,7 +43,7 @@ export default function HomePage(props: Props) {
           Upcoming Events
         </Typography>
 
-        {props.upcomingEvents.length > 1 ?
+        {props.upcomingEvents.length > 0 ?
           <EventsPanel events={props.upcomingEvents} />
           : <Typography variant="body1" mt={1}>
             To be announced
