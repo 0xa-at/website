@@ -23,6 +23,13 @@ export default function AuthorPage({ event }: Props) {
                 </Typography>
             </Box>
 
+            {/* Pictures */}
+            {event.pictures && event.pictures.length > 0 && (
+                <Box mt={4}>
+                    <ImageCarousel images={event.pictures} />
+                </Box>
+            )}
+
             <Box display="flex" flexDirection={isMobile ? 'column' : 'row'} mt={4}>
                 <Box flex={1} mr={isMobile ? 0 : 4}>
                     <Typography variant="body1" style={{ whiteSpace: 'pre-line' }}>
@@ -52,6 +59,27 @@ export default function AuthorPage({ event }: Props) {
                                 </Typography>
                             </Box>
                         ))}
+                    </Box>
+                )}
+
+                {/* Recording */}
+                {event.recording && (
+                    <Box mt={4}>
+                        <Typography variant="h4" style={{ fontWeight: 'bold' }}>
+                            Recording
+                        </Typography>
+
+                        <Box pt={3} >
+                            <iframe
+                                width={'100%'}
+                                height="500px"
+                                src={event.recording}
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </Box>
                     </Box>
                 )}
 
@@ -90,37 +118,6 @@ export default function AuthorPage({ event }: Props) {
                     </Box>
                 )}
 
-                {/* Recording */}
-                {event.recording && (
-                    <Box mt={4}>
-                        <Typography variant="h4" style={{ fontWeight: 'bold' }}>
-                            Recording
-                        </Typography>
-
-                        <Box pt={3} >
-                            <iframe
-                                width={'100%'}
-                                height="500px"
-                                src={event.recording}
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
-                        </Box>
-                    </Box>
-                )}
-
-                {/* Pictures */}
-                {event.pictures && event.pictures.length > 0 && (
-                    <Box mt={4}>
-                        <Typography variant="h4" style={{ fontWeight: 'bold' }} mb={1}>
-                            Pictures
-                        </Typography>
-
-                        <ImageCarousel images={event.pictures} />
-                    </Box>
-                )}
             </Box>
         </Box >
     )
