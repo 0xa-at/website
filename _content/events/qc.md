@@ -2,7 +2,7 @@
 title: Quantum Computing - From Theory to Practice
 date: 2023-03-28 18:30
 link: /events/qc
-image: https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
+image: /images/event_header/qc.jpg
 
 location: JKU Linz, Open Innovation Center
 description: We are thrilled to announce our highly anticipated event, "Quantum Computing - From Theory to Practice", which is scheduled to take place on March 28th in partnership with LIT - Open Innovation Center. This event will be held at the Stufenforum/OIC and will feature three enlightening talks centered around Quantum Computing.
