@@ -9,17 +9,6 @@ export type AuthorType = {
   linkedin?: string
 }
 
-export type TalkType = {
-  id: string
-  title: string
-  date: Date
-  speaker: string | AuthorType
-  youtube: string
-  description: string
-  slides?: string
-  repository?: string
-}
-
 export type PostType = {
   id: string
   title: string

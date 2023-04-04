@@ -1,21 +1,29 @@
-import { Box, Grid } from "@mui/material";
-import EventPreview from "../components/EventPreview";
+import { Box } from "@mui/material";
 import PageHeader from "../components/PageHeader";
+import { EventType } from "../utils/types";
+import EventListPreview from "../components/EventListPreview";
+import { getPastEvents } from "../utils/api";
 
-export default function EventsPage() {
+type Props = {
+    allEvents: EventType[]
+}
 
-
+export default function EventsPage({ allEvents }: Props) {
     return (
         <Box>
             <PageHeader title="Events" />
-            {/* 
-            <Box mx={3} pt={3} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', }}>
-                {upcomingEvents.map((event) => (
-                    <EventPreview title={event.title} description={event.description} image={event.image} />
-                ))}
-            </Box> */}
 
+            {allEvents.map((event) => (
+                <EventListPreview key={event.id} event={event} />
+            ))}
+        </Box>
+    )
+}
 
-        </Box >
-    );
+export const getStaticProps = async () => {
+    const allEvents = getPastEvents()
+
+    return {
+        props: { allEvents },
+    }
 }

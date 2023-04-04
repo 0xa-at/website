@@ -5,12 +5,11 @@ import path from 'path';
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import PostType, { AuthorType, EventType, TalkType } from './types';
+import PostType, { AuthorType, EventType } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), '_content');
 const POSTS_DIR = CONTENT_DIR + '/posts'
 const AUTHORS_DIR = CONTENT_DIR + '/authors'
-const TALKS_DIR = CONTENT_DIR + '/talks'
 const EVENTS_DIR = CONTENT_DIR + '/events'
 
 // Posts
@@ -31,21 +30,6 @@ export function getAllPosts(): PostType[] {
     })
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-}
-
-// Talks
-//
-
-export function getTalksBySpeaker(speaker: string) {
-    return getAllTalks().filter(item => (item.speaker as AuthorType).id === speaker);
-}
-
-export function getTalkById(id: string): TalkType | undefined {
-    return getAllTalks().find(t => t.id === id);
-}
-
-export function getAllTalks(): TalkType[] {
-    return fs.readdirSync(TALKS_DIR).map(id => getContentById<TalkType>(TALKS_DIR, id)[0]);
 }
 
 // Authors

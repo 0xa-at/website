@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 const pages = [
     { name: 'Blog', href: '/blog' },
-    { name: 'Talks', href: '/talks' },
+    { name: 'Events', href: '/events' },
     { name: 'About', href: '/about' },
 ];
 

@@ -4,17 +4,15 @@ import { Stack } from "@mui/system";
 import AuthorDetails from "../../components/AuthorDetails";
 import AuthorSocials from "../../components/AuthorSocials";
 import PostPreview from "../../components/PostPreview";
-import PostType, { AuthorType, TalkType } from "../../utils/types";
-import { getAllAuthors, getAuthorById, getPostsByAuthor, getTalksBySpeaker } from "../../utils/api";
-import TalkPreview from "../../components/TalkPreview";
+import PostType, { AuthorType } from "../../utils/types";
+import { getAllAuthors, getAuthorById, getPostsByAuthor } from "../../utils/api";
 
 type Props = {
     author: AuthorType,
     posts: PostType[],
-    talks: TalkType[]
 }
 
-export default function AuthorPage({ author, posts, talks }: Props) {
+export default function AuthorPage({ author, posts }: Props) {
     const isMobile = useMediaQuery('(max-width:600px)');
 
     return (
@@ -42,19 +40,6 @@ export default function AuthorPage({ author, posts, talks }: Props) {
                     ))}
                 </span>
             }
-
-            {/* Recent talks */}
-            {
-                talks.length > 0 &&
-                <span>
-                    <Typography variant="h4">Talks</Typography>
-                    {talks.map(talk => (
-                        <TalkPreview key={talk.id} talk={talk} />
-                    ))}
-                </span>
-            }
-
-
         </Box >
     )
 }
@@ -68,13 +53,11 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
     const author = getAuthorById(params.id)
     const posts = getPostsByAuthor(params.id);
-    const talks = getTalksBySpeaker(params.id);
 
     return {
         props: {
             author,
             posts,
-            talks
         },
     }
 }
