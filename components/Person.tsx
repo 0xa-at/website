@@ -10,7 +10,10 @@ type Props = {
 export default function Person({ image, name, role }: Props) {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <Avatar sx={{ bgcolor: grey[500], width: 100, height: 100 }} />
+            <Avatar
+                sx={{ bgcolor: grey[500], width: 120, height: 120 }}
+                src={image}
+            />
             <Typography pt={1} variant="h6">{name}</Typography>
             <Typography variant="subtitle1">{role}</Typography>
 
