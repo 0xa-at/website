@@ -17,14 +17,14 @@ export default function AboutPage() {
 
       <Typography pt={3} variant="h4">Leadership</Typography>
       <Box pt={5} sx={{ display: 'flex', justifyContent: 'space-around', flexDirection: isMobile ? 'column' : 'row', gap: 2 }}>
-        <Person name={"Alexander Peherstorfer"} role={"Chairman"} />
-        <Person name={"Severin Mairinger"} role={"Chairman deputy"} />
+        <Person name={"Alexander Peherstorfer"} role={"Chairman"} image="/images/vorstand/ap.jpg" />
+        <Person name={"Severin Mairinger"} role={"Chairman deputy"} image="/images/vorstand/sm.jpg" />
       </Box>
       <Box pt={10} sx={{ display: 'flex', justifyContent: 'space-around', flexDirection: isMobile ? 'column' : 'row', gap: 2 }}>
-        <Person name={"Matthias Heiden"} role={"Secretary"} />
-        <Person name={"Andreas Schmid"} role={"Secretary deputy"} />
-        <Person name={"Alexander Brunner"} role={"Accountant"} />
-        <Person name={"Tobias Pucher"} role={"Accountant deputy"} />
+        <Person name={"Matthias Heiden"} role={"Secretary"} image="/images/vorstand/mh.jpg" />
+        <Person name={"Andreas Schmid"} role={"Secretary deputy"} image="/images/vorstand/as.png" />
+        <Person name={"Alexander Brunner"} role={"Accountant"} image="/images/vorstand/ab.jpg" />
+        <Person name={"Tobias Pucher"} role={"Accountant deputy"} image="/images/vorstand/tp.jpg" />
       </Box>
 
       {/* Imprint */}
