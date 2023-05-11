@@ -31,13 +31,13 @@ export default function JoinUsPage() {
                 </Grid>
                 <Grid item xs={6}>
                     <Typography variant="h4" component="h1" gutterBottom>Network</Typography>
-                    We have such an amazing network. Meet new people and connect with bla bla bla
+                    As part of your membership with us, you can enjoy opportunities for networking through events, online communities, and other platforms where you can meet and connect with like-minded individuals.
                 </Grid>
 
                 {/* Drinks and Snacks */}
                 <Grid item xs={6}>
                     <Typography variant="h4" component="h1" gutterBottom>Drinks and Snacks</Typography>
-                    Lots of free food and drinks!
+                    At select events, we offer complimentary refreshments such as drinks and snacks for our valued members. While not every occasion provides this perk, keep an eye out for those that do, as it can make for a more convenient experience.
                 </Grid>
                 <Grid item xs={6}>
                     <Image src="/images/qc/DSC_2731.jpg" width={500} height={300} alt={"asdf"} />
@@ -49,13 +49,13 @@ export default function JoinUsPage() {
                 </Grid>
                 <Grid item xs={6}>
                     <Typography variant="h4" component="h1" gutterBottom>Member-only Events</Typography>
-                    Really cool private events hosted at amazing locations
+                    Experience exclusive member-only events including Stammtisch gatherings and behind-the-scenes tours of local businesses.
                 </Grid>
 
                 {/* Discount / Priority Access */}
                 <Grid item xs={6}>
                     <Typography variant="h4" component="h1" gutterBottom>Discount & Priority Access</Typography>
-                    Discounts on events and priority access to events
+                    Members receive exclusive discounts and priority access to various events including workshops, hackathons, and merchandise at reduced prices.
                 </Grid>
                 <Grid item xs={6}>
                     <Image src="/images/qc/DSC_2731.jpg" width={500} height={300} alt={"asdf"} />
@@ -67,13 +67,13 @@ export default function JoinUsPage() {
                 </Grid>
                 <Grid item xs={6}>
                     <Typography variant="h4" component="h1" gutterBottom>The stage is yours</Typography>
-                    Present your ideas and projects to the community
+                    In addition to publishing blog posts and hosting talks, our members have the opportunity to share their innovative ideas and projects, providing a platform for collaboration and growth within the community.
                 </Grid>
 
                 {/* Voice in the organization */}
                 <Grid item xs={6}>
                     <Typography variant="h4" component="h1" gutterBottom>Voice in the organization</Typography>
-                    Your voice matters. We are a community and we want to hear from you
+                    Our members enjoy having a voice in the direction and decision making of our association. Additionally, they can choose to participate in various projects and initiatives, allowing them to make meaningful contributions to their community.
                 </Grid>
                 <Grid item xs={6}>
                     <Image src="/images/qc/DSC_2731.jpg" width={500} height={300} alt={"asdf"} />
