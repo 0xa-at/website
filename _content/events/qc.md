@@ -1,5 +1,5 @@
 ---
-title: Quantum Computing - From Theory to Practice
+title: 'Quantum Computing: From Theory to Practice'
 date: 2023-03-28 18:30
 link: /events/qc
 image: /images/event_header/qc.jpg
