@@ -5,7 +5,7 @@ link: /events/security
 image: /images/event_header/security.jpg
 
 location: JKU Linz, Open Innovation Center
-description: Join us at JKU on June 5th, starting at 18:30, for an exciting evening dedicated to the fascinating world of Cyber Security. Our event is hosted at and in cooperation with the LIT - Open Innovation Center and aims to bridge the gap between theoretical concepts and practical appli
+description: Join us at JKU on June 5th, starting at 18:30, for an exciting evening dedicated to the fascinating world of Cyber Security. Our event is hosted at and in cooperation with the LIT - Open Innovation Center and aims to bridge the gap between theoretical concepts and practical applications.
 
 
 
