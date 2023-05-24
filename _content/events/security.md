@@ -18,4 +18,5 @@ description: Join us at JKU on June 5th, starting at 18:30, for an exciting even
     Whether you are a student, professional, or simply curious about cybersecurity, this event promises to offer valuable knowledge and inspiration. Join us for an evening of informative talks, engaging discussions, and networking opportunities with like-minded individuals.
 
     *Topics may be subject to change
+register_link: https://pretix.eu/0xa/security/
 ---
