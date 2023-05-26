@@ -19,7 +19,7 @@
     "gray-matter": "^4.0.3",
     "jetbrains-mono": "^1.0.6",
     "next": "13.0.3",
-    "next-goatcounter": "^1.0.1",
+    "next-goatcounter": "git://github.com/devinmatte/next-goatcounter#cleanup-builds",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-material-ui-carousel": "^3.4.2",
