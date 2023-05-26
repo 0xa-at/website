@@ -7,7 +7,7 @@ import theme from '../theme'
 import 'jetbrains-mono'
 import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
-import { GCScript } from "next-goatcounter";
+import { GCScript } from 'next-goatcounter';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
