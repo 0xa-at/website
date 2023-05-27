@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  transpilePackages: ['next-goatcounter'],
   images: {
     unoptimized: true,
   },

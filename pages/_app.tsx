@@ -7,6 +7,7 @@ import theme from '../theme'
 import 'jetbrains-mono'
 import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
+import { GCScript } from 'next-goatcounter';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -18,9 +19,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Box sx={{
       display: 'flex', flexDirection: 'column', minHeight: '100vh'
     }}>
+
       {router.query.hideNav === undefined && <NavBar />}
 
       <Container sx={{ flexGrow: 5 }}>
+        <GCScript siteUrl={"https://0xa.goatcounter.com/count"} />
+
         <Component {...pageProps} />
       </Container>
 
