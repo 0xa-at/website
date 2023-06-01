@@ -26,4 +26,5 @@ description: Join us at JKU on June 5th, starting at 18:30, for an exciting even
 
     *Topics may be subject to change
 register_link: https://pretix.eu/0xa/security/
+livestream_link: https://www.youtube.com/watch?v=2nbhfOUV3rI
 ---
