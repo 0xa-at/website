@@ -30,6 +30,22 @@ export default function EventSidebar({ event }: Props) {
                         {event.location}
                     </Typography>
 
+                    {/* Livestream */}
+                    {event.livestream_link &&
+                        <>
+                            <Divider sx={{ my: 2 }} />
+
+                            <Typography variant="h6" style={{ fontWeight: 'bold' }}>
+                                Livestream
+                            </Typography>
+                            <Typography variant="body1">
+                                <Link href={event.livestream_link} color="inherit">
+                                    Watch here
+                                </Link>
+                            </Typography>
+                        </>
+                    }
+
                     {/* Link */}
                     {event.register_link &&
                         <>

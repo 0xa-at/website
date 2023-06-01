@@ -43,6 +43,7 @@ export type EventType = {
   location: string
   description: string
   register_link: string
+  livestream_link?: string
 
   // Added after the event
   recording: string
