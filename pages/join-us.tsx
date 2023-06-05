@@ -96,7 +96,7 @@ export default function JoinUsPage() {
             {/*  */}
             <Typography variant="h3" pt={5}>How can I join?</Typography>
             <Typography variant="body1" py={1}>
-                To become part of our elite community, all you have to do is fill out this simple form. You don't need any special skills or qualifications - anyone is welcome to join! And yes, we know what you're thinking... there is absolutely NO CATCH! This offer is completely FREE. So why wait? Join us today and take your first step towards becoming one of the chosen few!
+                To become part of our elite community, all you have to do is fill out this simple form. You don&apos;t need any special skills or qualifications - anyone is welcome to join! And yes, we know what you&apos;re thinking... there is absolutely NO CATCH! This offer is completely FREE. So why wait? Join us today and take your first step towards becoming one of the chosen few!
             </Typography>
 
             <Button variant="contained" color="primary" size="large" href="https://forms.gle/ohfnyEE9qwTn2tHr9" target="_blank" rel="noopener noreferrer">Join us</Button>
