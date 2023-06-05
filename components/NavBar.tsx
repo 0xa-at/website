@@ -44,7 +44,18 @@ const NavBar = () => {
                                 </Button>
                             ))
                         }
+
+                        {/* Join Us */}
+                        <Button
+                            onClick={() => router.push('join-us')}
+                            variant="outlined"
+                            sx={{ my: 2, ml: 3, color: 'white', display: 'block', fontWeight: 'bold', borderColor: 'white' }}
+                        >
+                            Join us!
+                        </Button>
                     </Box>
+
+
                 </Toolbar>
             </Container>
         </AppBar >
