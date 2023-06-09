@@ -26,4 +26,20 @@ description: Join us at JKU on June 5th, starting at 18:30, for an exciting even
     *Topics may be subject to change
 register_link: https://pretix.eu/0xa/security/
 livestream_link: https://www.youtube.com/watch?v=2nbhfOUV3rI
+
+recording: https://www.youtube.com/embed/2nbhfOUV3rI
+pictures: 
+    - /images/security/DSC_3158.jpg
+    - /images/security/DSC_3166.jpg
+    - /images/security/DSC_3192.jpg
+    - /images/security/DSC_3251.jpg
+    - /images/security/DSC_3252.jpg
+    - /images/security/DSC_3261.jpg
+    - /images/security/DSC_3266.jpg
+    - /images/security/DSC_3326.jpg
+    - /images/security/DSC_3338.jpg
+    - /images/security/DSC_3362.jpg
+    - /images/security/DSC_3366.jpg
+    - /images/security/DSC_3371.jpg
+    - /images/security/DSC_3374.jpg
 ---
