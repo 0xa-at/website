@@ -11,7 +11,7 @@ export default function Person({ image, name, role }: Props) {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Avatar
-                sx={{ bgcolor: grey[500], width: 120, height: 120 }}
+                sx={{ bgcolor: grey[500], width: 200, height: 200 }}
                 src={image}
             />
             <Typography pt={1} variant="h6">{name}</Typography>
