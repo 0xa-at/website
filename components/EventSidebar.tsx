@@ -2,6 +2,7 @@ import { Divider, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
 import { EventType } from "../utils/types";
+import AddToCalendarButton from "./AddToCalendarButton";
 
 type Props = {
     event: EventType
@@ -19,6 +20,7 @@ export default function EventSidebar({ event }: Props) {
                     <Typography variant="body1" >
                         {event.date}
                     </Typography>
+                    <AddToCalendarButton event={event} />
 
                     <Divider sx={{ my: 2 }} />
 

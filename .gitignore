@@ -41,3 +41,5 @@ next-env.d.ts
 .devenv*
 devenv.local.nix
 
+# built files
+public/**/*.ics
