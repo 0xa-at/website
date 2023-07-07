@@ -4,14 +4,14 @@ import { useRouter } from "next/router";
 
 export default function CalendarPanel() {
   const router = useRouter();
-  const icalUrl = window.location.origin + "/" + router.basePath + "events.ics";
+  const icalPath =  router.basePath + "events.ics";
 
   const downloadIcal = () => {
-    window.open(icalUrl, "_blank");
+    window.open(icalPath, "_blank");
   };
 
   const copyUrl = () => {
-    navigator.clipboard.writeText(icalUrl);
+    navigator.clipboard.writeText(window.location.origin + "/" + icalPath);
   };
 
   return (
