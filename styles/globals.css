@@ -6,3 +6,18 @@ body {
 #__next {
   height: 80%;
 }
+
+pre {
+  color: #f8f8f2;
+  background: #2d2e30;
+  font-family: 'Jetbrains Mono', monospace;
+  font-size: 0.9rem;
+  text-align: left;
+  white-space: pre;
+  line-height: 1.5;
+
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
