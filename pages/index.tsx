@@ -3,6 +3,7 @@ import EventsPanel from '../components/EventsPanel';
 import { getPastEvents, getUpcomingEvents } from '../utils/api';
 import { EventType } from '../utils/types';
 import ImageCarousel from '../components/ImageCarousel';
+import CalendarPanel from '../components/CalendarPanel';
 
 type Props = {
   upcomingEvents: EventType[];
@@ -51,6 +52,10 @@ export default function HomePage(props: Props) {
             To be announced
           </Typography>
         }
+
+        <Box mt={5}>
+          <CalendarPanel />
+        </Box>
 
         {/* Past events */}
         <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
