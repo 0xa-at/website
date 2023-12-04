@@ -22,7 +22,7 @@ export default function EventPreview(props: Props) {
             <CardActionArea onClick={handleClick}>
                 <CardMedia
                     component="img"
-                    height="100"
+                    height="200"
                     image={props.image}
                     alt={props.title}
                     style={{ objectFit: "cover" }}
