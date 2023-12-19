@@ -18,4 +18,5 @@ description: |
     
     Whether you are a student, professional, or simply curious about healthcare technology, this event promises to offer valuable knowledge and inspiration. Join us for an evening of informative talks, engaging discussions, and networking opportunities with like-minded individuals.
 image: https://secure.meetupstatic.com/photos/event/9/c/f/600_517562511.webp?h=300
+recording: https://www.youtube.com/embed/5RgNyHYWaI0
 ---
