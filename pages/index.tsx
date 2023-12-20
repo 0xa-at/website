@@ -32,6 +32,10 @@ export default function HomePage(props: Props) {
     "images/qc/DSC_2875.jpg",
     "images/qc/DSC_2759.jpg",
     "images/qc/DSC_2819.jpg",
+
+    "images/ai_in_med/DSCF1881-19.JPG",
+    "images/ai_in_med/DSCF1881-16.JPG",
+    "images/ai_in_med/DSCF1881-12.JPG",
   ];
 
   return (
