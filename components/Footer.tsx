@@ -28,7 +28,7 @@ export default function Footer() {
                         <Typography variant="h5" sx={{ fontWeight: 'bold', pb: 1 }}>Contact</Typography>
 
                         <Typography variant="body1">0xA Science Association</Typography>
-                        <Typography variant="body1">Kubinweg 28</Typography>
+                        <Typography variant="body1">Julius-Raab Straße 10/539</Typography>
                         <Typography variant="body1">4040 Linz</Typography>
                         <Link href="mailto:office@0xa.at" color="inherit">office@0xa.at</Link>
                     </Grid>
