@@ -1,15 +1,44 @@
 import { ICalEventData } from "ical-generator";
 import { EventType } from "./types";
+import { parse, isValid } from "date-fns";
 
-const dateHasTime = (date: Date) =>
-  date.getHours() !== 0 || date.getMinutes() !== 0 || date.getSeconds() !== 0;
+const parseDate = (date: string) => {
+  const dateWithoutTimeFormat = "yyyy-MM-dd";
+  const dateWithoutTime = parse(date, dateWithoutTimeFormat, new Date());
+  if (isValid(dateWithoutTime)) {
+    return {start: dateWithoutTime, end: dateWithoutTime, hasTime: false};
+  }
+  const dateWithTimeFormat = "yyyy-MM-dd HH:mm";
+  const dateWithTime = parse(date,dateWithTimeFormat, new Date());
+  if (isValid(dateWithTime)) {
+    return {start: dateWithTime, end: dateWithTime, hasTime: true};
+  }
+  const dateWithTimeRangeRegex = / (\d{2}:\d{2})-(\d{2}:\d{2})$/;
+  const match = date.match(dateWithTimeRangeRegex);
+  if (match) {
+    const dateStringWithoutTime = date.replace(dateWithTimeRangeRegex, "");
+    const startTime = match[1];
+    const endTime = match[2];
+    const start = parse(dateStringWithoutTime + " " + startTime, dateWithTimeFormat, new Date());
+    const end = parse(dateStringWithoutTime + " " + endTime, dateWithTimeFormat, new Date());
+    if (isValid(start) && isValid(end)) {
+      return {start, end, hasTime: true};
+    }
+  }
+
+  throw new Error(`Invalid date format: ${date}; expected formats: "${dateWithoutTimeFormat}" or "${dateWithTimeFormat}" or a date with a time range "${dateWithTimeRangeRegex}"`);
+};
 
 const notNullOrUndefined = (data: any) => data !== undefined && data !== null;
 
 export const createCalendarEvent =
   (baseUrl: string) =>
   (event: EventType): ICalEventData => {
-    const date = new Date(event.date);
+    const date = parseDate(event.date);
+    if (date.start === date.end) {
+      console.warn(`[Warning] Event ${event.title} has the same start and end date: ${date.start}`)
+    }
+
     const mainLink = baseUrl + event.link;
     const links = [
       mainLink,
@@ -34,9 +63,9 @@ export const createCalendarEvent =
       url: mainLink,
 
       // https://www.npmjs.com/package/ical-generator#-date-time--timezones
-      start: date.toUTCString(),
-      end: date.toUTCString(),
+      start: date.start.toUTCString(),
+      end: date.end.toUTCString(),
       timezone: "Europe/Vienna",
-      allDay: !dateHasTime(date),
+      allDay: !date.hasTime,
     };
   };
