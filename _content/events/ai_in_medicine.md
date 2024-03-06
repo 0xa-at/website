@@ -22,7 +22,7 @@ recording: https://www.youtube.com/embed/5RgNyHYWaI0
 pictures:
   - /images/ai_in_med/DSCF1881-11.JPG
   - /images/ai_in_med/DSCF1881-19.JPG
-  - /images/ai_in_med/DSCF1881.JPG
+  - /images/ai_in_med/DSCF1881.jpg
   - /images/ai_in_med/DSCF1881-12.JPG
   - /images/ai_in_med/DSCF1881-13.JPG
   - /images/ai_in_med/DSCF1881-14.JPG
