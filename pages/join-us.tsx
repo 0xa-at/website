@@ -99,7 +99,7 @@ export default function JoinUsPage() {
                 To become part of our community, all you have to do is fill out this simple form. You don&apos;t need any special skills or qualifications - anyone is welcome to join! And yes, we know what you&apos;re thinking... there is absolutely NO CATCH! This offer is completely FREE. So why wait? Join us today and take your first step towards becoming one of the chosen few!
             </Typography>
 
-            <Button variant="contained" color="primary" size="large" href="https://forms.gle/mCs5Z2BNP8K28Dg98" target="_blank" rel="noopener noreferrer">Join us</Button>
+            <Button variant="contained" color="primary" size="large" href="https://forms.gle/z8hqxfRy95eKy3du6" target="_blank" rel="noopener noreferrer">Join us</Button>
         </Box >
     )
 }
