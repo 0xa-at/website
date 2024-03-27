@@ -59,6 +59,10 @@ export default function Footer() {
                             <Image src="/sponsors/fivesquare.svg" alt="Fivesquare" width={200} height={40} />
                         </Link>
 
+                        <Link href="https://www.jku.at/en/lit-open-innovation-center/" target="_blank" rel="noopener noreferrer">
+                            <Image src="/sponsors/lit-oic.png" alt="LIT OIC" width={200} height={40} />
+                        </Link>
+
                     </Grid>
                 </Grid>
             </Container>
