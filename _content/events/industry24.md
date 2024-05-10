@@ -3,7 +3,7 @@ title: Industry 4.0
 date: 2024-05-21 18:30-20:00
 link: /events/industry24
 location: JKU Linz, Open Innovation Center
-image: /images/event_header/quantum24.png
+image: https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 
 description: |
     TBAJoin us on Mai 21st at the Open Innovation Center at JKU for an evening dedicated to Industry 4.0. We try to bring people together to learn about the processes that are revolutionizing industry right now!
