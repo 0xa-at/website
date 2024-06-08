@@ -24,18 +24,18 @@ export async function getStaticProps() {
 export default function HomePage(props: Props) {
   const isMobile = useMediaQuery('(max-width:600px)');
   const images = [
-    "images/security/DSC_3366.jpg",
-    "images/security/DSC_3338.jpg",
-    "images/security/DSC_3266.jpg",
+    "/images/security/DSC_3366.jpg",
+    "/images/security/DSC_3338.jpg",
+    "/images/security/DSC_3266.jpg",
 
-    "images/qc/DSC_2731.jpg",
-    "images/qc/DSC_2875.jpg",
-    "images/qc/DSC_2759.jpg",
-    "images/qc/DSC_2819.jpg",
+    "/images/qc/DSC_2731.jpg",
+    "/images/qc/DSC_2875.jpg",
+    "/images/qc/DSC_2759.jpg",
+    "/images/qc/DSC_2819.jpg",
 
-    "images/ai_in_med/DSCF1881-19.JPG",
-    "images/ai_in_med/DSCF1881-16.JPG",
-    "images/ai_in_med/DSCF1881-12.JPG",
+    "/images/ai_in_med/DSCF1881-19.JPG",
+    "/images/ai_in_med/DSCF1881-16.JPG",
+    "/images/ai_in_med/DSCF1881-12.JPG",
   ];
 
   return (

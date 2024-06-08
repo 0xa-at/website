@@ -1,5 +1,10 @@
 {pkgs, ...}: {
   packages = with pkgs; [
-    yarn
+    nodePackages.serve
   ];
+
+  languages.javascript = {
+    enable = true;
+    yarn.enable = true;
+  };
 }

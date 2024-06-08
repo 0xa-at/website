@@ -1,5 +1,6 @@
 import { CardActionArea, CardContent, CardMedia, Paper, Typography } from "@mui/material";
 import { useRouter } from "next/router";
+import Image from 'next/image';
 
 type Props = {
     title: string,
@@ -20,13 +21,18 @@ export default function EventPreview(props: Props) {
     return (
         <Paper variant="outlined" sx={{ height: "100%" }}>
             <CardActionArea onClick={handleClick}>
-                <CardMedia
-                    component="img"
-                    height="200"
-                    image={props.image}
-                    alt={props.title}
-                    style={{ objectFit: "cover" }}
-                />
+
+            <CardMedia>
+                    <div style={{ width: "100%", height: 200, position: "relative" }}>
+                        <Image
+                            fill
+                            src={props.image}
+                            alt={props.title}
+                            style={{ objectFit: "cover" }}
+                            loading={"lazy"}
+                            />
+                    </div>
+            </CardMedia>
 
                 <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
