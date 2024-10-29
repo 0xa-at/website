@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+
 export type AuthorType = {
   id: string
   name: string
@@ -48,6 +50,13 @@ export type EventType = {
   // Added after the event
   recording: string
   pictures: string[]
+}
+
+
+export type LinktreeLink = {
+    href: string | string[], // array = parts of the link that will be joined by "/" for obfuscation
+    title: string,
+    icon: IconDefinition,
 }
 
 export default PostType
