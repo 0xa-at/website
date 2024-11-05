@@ -62,7 +62,7 @@ export default function EventsPage({ links }: Props) {
 export const getStaticProps = async () => {
     const links: LinktreeLink[] = [
         {
-            href: ["https:", "", "chat.whatsapp.com", "LloUBdts2iB1JVkBsqLMq6"],
+            href: ["https:", "", "chat.whatsapp.com", "CazjR0pfl3lDTsBcmDzOhR"],
             title: "WhatsApp Community",
             icon: faWhatsapp,
         },
