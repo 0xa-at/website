@@ -32,4 +32,5 @@ pictures:
   - /images/0xrust/speakers.jpg
   - /images/0xrust/networking_1.jpg
   - /images/0xrust/networking.jpg
+recording: https://www.youtube.com/embed/dcWu4m_vwGk
 ---
