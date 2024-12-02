@@ -15,6 +15,6 @@ schedule:
   speaker: Kristina Kirova
 
 description: |
-Join Us for 0xInternational for Inspiring Talks on Careers and Cultural Diversity! Explore the world of international careers and the power of diversity in science and education with two amazing speakers, and after the talks, free food and drinks will be provided to connect to new people and engage in meaningful discussions.
-Sounds interesting? Join us and let's broaden our horizons together!
+  Join Us for 0xInternational for Inspiring Talks on Careers and Cultural Diversity! Explore the world of international careers and the power of diversity in science and education with two amazing speakers, and after the talks, free food and drinks will be provided to connect to new people and engage in meaningful discussions.
+  Sounds interesting? Join us and let's broaden our horizons together!
 ---
