@@ -13,6 +13,10 @@ schedule:
   title: Thriving in Multicultural Science by Kristina Kirova
   description: Kristina Kirova has studied and worked all around the globe. She’ll share insights from her experiences working in diverse teams and navigating different university systems, highlighting that modern science thrives within large, multicultural collaborations, emphasizing the importance of challenging preconceptions and breaking down stereotypes.
   speaker: Kristina Kirova
+-
+  title: Networking with Confidence across borders by Gabriela Maia
+  description: Gabriela Maia shares her expertise as an educator and entrepreneur, discussing strategies for building cross-cultural professional networks through effective communication and leveraging diversity. She will highlight how personalized learning enhances communication skills, empowering professionals to excel globally.
+  speaker: Gabriela Maia
 
 description: |
   Join Us for 0xInternational for Inspiring Talks on Careers and Cultural Diversity! Explore the world of international careers and the power of diversity in science and education with two amazing speakers, and after the talks, free food and drinks will be provided to connect to new people and engage in meaningful discussions.
