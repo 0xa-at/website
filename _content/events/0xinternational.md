@@ -21,6 +21,14 @@ schedule:
 description: |
   Join Us for 0xInternational for Inspiring Talks on Careers and Cultural Diversity! Explore the world of international careers and the power of diversity in science and education with two amazing speakers, and after the talks, free food and drinks will be provided to connect to new people and engage in meaningful discussions.
   Sounds interesting? Join us and let's broaden our horizons together!
+pictures:
+  - /images/0xinternational/Q&A-min.jpg
+  - /images/0xinternational/speaker1-min.jpg
+  - /images/0xinternational/speaker2-min.jpg
+  - /images/0xinternational/networking_talk.jpg
+  - /images/0xinternational/Networking_Food-min.jpg
+  - /images/0xinternational/Networking_Totale-min.jpg
+  - /images/0xinternational/Speaker3_Halbtotale-min.jpg
+  - /images/0xinternational/speaker_professional-min.jpg
 
-register_link: https://pretix.eu/0xa/international/
 ---
