@@ -30,5 +30,5 @@ pictures:
   - /images/0xinternational/Networking_Totale-min.jpg
   - /images/0xinternational/Speaker3_Halbtotale-min.jpg
   - /images/0xinternational/speaker_professional-min.jpg
-
+recording: https://www.youtube.com/embed/KFqFqW4e2PI
 ---
