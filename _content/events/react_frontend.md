@@ -6,7 +6,6 @@ location: JKU Science Park 3, Room 048
 image: /images/event_header/react_frontend.png
 
 description: |
-
 🚀 From Backend to Full Deployment: A Hands-on React Workshop! 🌐
 
 In this workshop, we build on a backend developed in a previous session and take it to the next level! You'll learn to:
