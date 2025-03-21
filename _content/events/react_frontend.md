@@ -7,6 +7,7 @@ image: /images/event_header/react_frontend.png
 
 description: |
   🚀 From Backend to Full Deployment: A Hands-on React Workshop! 🌐
+
   In this workshop, we build on a backend developed in a previous session and take it to the next level! You'll learn to
   ✅ Develop and test a frontend using React
   ✅ Dockerize the provided backend for seamless deployment
