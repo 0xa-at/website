@@ -17,5 +17,5 @@ description: |
 
   📅 Join us to level up your skills while enjoying free snacks and drinks 🍻
 
-register_link: https://pretix.eu/0xa/react_frontend/
+register_link: https://pretix.eu/0xa/reactfrontend/
 ---
