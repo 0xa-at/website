@@ -18,4 +18,9 @@ description: |
   📅 Join us to level up your skills while enjoying free snacks and drinks 🍻
 
 register_link: https://pretix.eu/0xa/reactfrontend/
+pictures:
+  - /images/react_workshop25/full.jpg
+  - /images/react_workshop25/alex.jpg
+  - /images/react_workshop25/first_row.jpg
+ 
 ---

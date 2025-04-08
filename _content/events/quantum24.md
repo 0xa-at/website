@@ -15,4 +15,13 @@ description: |
     Falls du bis 29.02.2024 noch kein 0xA Mitglied bist, verrechnen wir eine Teilnahmegebühr von 10€. Falls du bereits Mitglied bist, bei der Zahlungsmethode einfach "Barzahlung" auswählen, für dich ist der Workshop kostenlos. Wir freuen uns schon auf das gemeinsame Lernen!
 
 register_link: https://pretix.eu/0xa/quantum/
+pictures:
+  - /images/quantum_workshop_24/1.jpeg
+  - /images/quantum_workshop_24/2.jpeg
+  - /images/quantum_workshop_24/3.jpeg
+  - /images/quantum_workshop_24/4.jpeg
+  - /images/quantum_workshop_24/5.jpeg
+  - /images/quantum_workshop_24/6.jpeg
+  - /images/quantum_workshop_24/7.jpeg
+ 
 ---
