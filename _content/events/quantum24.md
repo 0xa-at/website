@@ -22,6 +22,5 @@ pictures:
   - /images/quantum_workshop_24/4.jpeg
   - /images/quantum_workshop_24/5.jpeg
   - /images/quantum_workshop_24/6.jpeg
-  - /images/quantum_workshop_24/7.jpeg
  
 ---
