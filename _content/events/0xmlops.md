@@ -1,6 +1,6 @@
 ---
-title: 0xMLOps
-date: 2025-06-18 TBD
+title: 0xMLOps - Beyond the Notebook
+date: 2025-06-18 17:00-19:30
 link: /events/0xmlops
 location: JKU Linz, OIC Stufenforum
 register_link: https://pretix.eu/0xa/0xmlops/
