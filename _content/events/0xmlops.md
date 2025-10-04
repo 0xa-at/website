@@ -23,5 +23,15 @@ description: |
 
 
   Are you ready to begin your MLOps journey? ✨ Make sure to mark your calendars and signup, we look forward to seeing all of you!
+
+pictures: 
+  - /images/0xmlops/_MG_2858.jpg
+  - /images/0xmlops/_MG_2863.jpg
+  - /images/0xmlops/_MG_2883.jpg
+  - /images/0xmlops/_MG_2899.jpg
+  - /images/0xmlops/_MG_2903.jpg
+  - /images/0xmlops/_MG_2906.jpg
+  - /images/0xmlops/_MG_2917.jpg
+
 ---
 
