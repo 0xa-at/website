@@ -67,14 +67,14 @@ export const getStaticProps = async () => {
             icon: faWhatsapp,
         },
         {
-            href: "https://discord.com/invite/26KVauxdrn",
-            title: "Discord",
-            icon: faDiscord,
-        },
-        {
             href: "https://www.instagram.com/0xa.at/",
             title: "Instagram",
             icon: faInstagram,
+        },
+        {
+            href: "https://discord.com/invite/26KVauxdrn",
+            title: "Discord",
+            icon: faDiscord,
         },
         {
             href: "https://www.linkedin.com/company/0xa-science-association/",
