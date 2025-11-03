@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const pages = [
-    { name: 'Blog', href: '/blog' },
+    { name: 'Connect', href: '/links' },
     { name: 'Events', href: '/events' },
     { name: 'About', href: '/about' },
 ];
