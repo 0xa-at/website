@@ -41,7 +41,7 @@ export default function EventsPage({ links }: Props) {
             </Box>
 
             <Head>
-                <title>Linktree - 0xA Science Association</title>
+                <title>Connect</title>
             </Head>
 
             <Box style={{ textAlign: "center" }}>
