@@ -18,40 +18,27 @@ type Props = {
 
 export default function EventsPage({ links }: Props) {
     return (
-        <Box>
-            <Box style={{ display: "flex", padding: 40, justifyContent: "center" }}>
-                <Box style={{
-                    backgroundColor: "black",
-                    borderRadius: "50%",
-                    width: 150,
-                    height: 150,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+<Box>
+    <Box style={{ display: "flex", justifyContent: "center", padding: 40 }}>
+       <Image
+            src={'/0xa_welcome_day_slide.jpg'}
+            alt="0xA Welcome Day Slide"
+            layout="responsive"
+            width={800} // Set the width of the image (in pixels)
+            height={400} // Set the height of the image (in pixels)
+            style={{
+                borderRadius: "10px", // Optional: Add rounded corners
+            }}
+        />
 
-                }}>
-                    <Image
-                        style={{ cursor: 'pointer' }}
-                        src={'/logo-white.png'}
-                        width={90}
-                        height={40}
-                        alt="0xA Logo"
-                    />
-                </Box>
-            </Box>
-
+    </Box>
             <Head>
                 <title>Connect</title>
             </Head>
 
             <Box style={{ textAlign: "center" }}>
 
-                <Typography variant="h3" >
-                    0xA Science Association
-                </Typography>
-                <Divider />
-
-                {links.map((link, idx) => (
+               {links.map((link, idx) => (
                     <LinktreeButton key={idx} link={link} />
                 ))}
             </Box>
