@@ -22,7 +22,7 @@ const NavBar = () => {
                     {/* Width = Height * 2.27 */}
                     <Image
                         style={{ cursor: 'pointer' }}
-                        src={'/logo-white.png'}
+                        src={'/logo_christmas_white.png'}
                         width={90}
                         height={40}
                         alt="0xA Logo"
