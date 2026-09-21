@@ -100,6 +100,7 @@ export default function JoinUsPage() {
             </Typography>
 
             <Button variant="contained" color="primary" size="large" href="https://forms.gle/z8hqxfRy95eKy3du6" target="_blank" rel="noopener noreferrer">Join us</Button>
+            {/* <Button variant="contained" color="primary" size="large" href="https://forms.gle/V9Xb7HF3vQpTPodo6" target="_blank" rel="noopener noreferrer">Join us</Button> */}
         </Box >
     )
 }
