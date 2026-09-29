@@ -1,22 +1,26 @@
 import { Box, Button, Paper, Typography, useMediaQuery } from '@mui/material';
 import EventsPanel from '../components/EventsPanel';
-import { getPastEvents, getUpcomingEvents } from '../utils/api';
-import { EventType } from '../utils/types';
+import ProjectsPanel from '../components/ProjectsPanel';
+import { getPastEvents, getUpcomingEvents, getAllProjects } from '../utils/api';
+import { EventType, ProjectType } from '../utils/types';
 import ImageCarousel from '../components/ImageCarousel';
 import CalendarPanel from '../components/CalendarPanel';
 
 type Props = {
   upcomingEvents: EventType[];
   pastEvents: EventType[];
+  projects: ProjectType[];
 }
 
 export async function getStaticProps() {
   const upcomingEvents = getUpcomingEvents();
   const pastEvents = getPastEvents();
+  const projects = getAllProjects();
   return {
     props: {
       upcomingEvents,
-      pastEvents
+      pastEvents,
+      projects
     },
   }
 }
@@ -62,6 +66,12 @@ export default function HomePage(props: Props) {
         <Box mt={5}>
           <CalendarPanel />
         </Box>
+
+        {/* Projects */}
+        <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
+          Projects
+        </Typography>
+        <ProjectsPanel projects={props.projects} />
 
         {/* Past events */}
         <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
