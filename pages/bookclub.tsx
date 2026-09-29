@@ -38,7 +38,7 @@ export const getStaticProps = async () => {
     const links: LinktreeLink[] = [
         {
             href: ["https:", "", "chat.whatsapp.com", "CazjR0pfl3lDTsBcmDzOhR"],
-            title: "WhatsApp Community",
+            title: "WhatsApp Community (incl. other 0xA initiatives)",
             icon: faWhatsapp,
         },
     ];

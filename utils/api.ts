@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import PostType, { AuthorType, EventType } from './types';
+import PostType, { AuthorType, EventType, ProjectType } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), '_content');
 const POSTS_DIR = CONTENT_DIR + '/posts'
@@ -62,6 +62,19 @@ export function getAllEvents(): EventType[] {
     return fs.readdirSync(EVENTS_DIR)
         .map(id => getContentById<EventType>(EVENTS_DIR, id)[0])
         .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+}
+
+
+// Projects
+//
+const PROJECTS_DIR = CONTENT_DIR + '/projects'
+export function getAllProjects(): ProjectType[] {
+    return fs.readdirSync(PROJECTS_DIR)
+        .map(id => getContentById<ProjectType>(PROJECTS_DIR, id)[0])
+}
+
+export function getProjectById(id: string): ProjectType | undefined {
+    return getAllProjects().find(p => p.id === id);
 }
 
 // Misc

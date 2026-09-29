@@ -59,4 +59,15 @@ export type LinktreeLink = {
     icon: IconDefinition,
 }
 
+export type ProjectType = {
+  id: string
+  title: string
+  description: string
+  link: string
+  image: string
+
+  signup_link?: string // how to "engage" with the project, e.g. whatsapp community or instagram project
+
+}
+
 export default PostType
