@@ -65,7 +65,7 @@ export default function HomePage(props: Props) {
 
         {/* Past events */}
         <Typography variant="h2" pb={2} sx={{ fontSize: isMobile ? '8vw' : '3rem', fontWeight: 'bold', mt: '2em' }}>
-          Past Events
+          Past Events and Projects
         </Typography>
 
         <EventsPanel events={props.pastEvents} />
