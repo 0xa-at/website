@@ -18,13 +18,9 @@ export default function AboutPage() {
       <Typography pt={3} variant="h4">Leadership</Typography>
       <Box pt={5} sx={{ display: 'flex', justifyContent: 'space-around', flexDirection: isMobile ? 'column' : 'row', gap: 2 }}>
         <Person name={"Alexander Peherstorfer"} role={"Chairman"} image="/images/vorstand/ap.jpg" />
-        <Person name={"Severin Mairinger"} role={"Chairman deputy"} image="/images/vorstand/sm.jpg" />
-      </Box>
-      <Box pt={10} sx={{ display: 'flex', justifyContent: 'space-around', flexDirection: isMobile ? 'column' : 'row', gap: 2 }}>
         <Person name={"Laura Legat"} role={"Secretary"} image="/images/vorstand/placeholder.jpeg" />
-        <Person name={"Sabine Wimmer"} role={"Secretary deputy"} image="/images/vorstand/sw.jpg" />
-        <Person name={"Matthias Heiden"} role={"Accountant"} image="/images/vorstand/mh.jpg" />
-        <Person name={"Tobias Pucher"} role={"Accountant deputy"} image="/images/vorstand/tp.jpg" />
+        <Person name={"Tobias Pucher"} role={"Accountant"} image="/images/vorstand/tp.jpg" />
+        <Person name={"Roman Bagdasarian"} role={"Partnerships Officer"} image="/images/vorstand/placeholder.jpg" />
       </Box>
 
       {/* Imprint */}
