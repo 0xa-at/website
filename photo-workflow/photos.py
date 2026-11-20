@@ -5,7 +5,8 @@
 # ///
 """Event photos: originals -> (optional 4:3 crop) -> same-size sharpened web JPGs, plus ONE comparison image.
 
-No colour edits. Every photo ends up the same width (WEB_WIDTH), downscaled with Lanczos and sharpened once, so photos
+No colour edits and no metadata: every output is pixels only (no EXIF, GPS, camera info, ICC, XMP; checked on each run).
+Every photo ends up the same width (WEB_WIDTH), downscaled with Lanczos and sharpened once, so photos
 from all phones/cameras are equally crisp. Only the 4:3 crops in <event>.manifest.tsv change the framing.
 
 Run from the repo root (nix provides uv + python, uv fetches the two packages declared in the header above):
@@ -18,11 +19,12 @@ Outputs: public/images/<event>/curated/NN_name.jpg the only images the site serv
          photo-workflow/<event>-comparison.jpg     ONE image: [original | final] pairs, with size / what was applied above each
 """
 import argparse
+import io
 import shutil
 import textwrap
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
+from PIL import Image, ImageCms, ImageDraw, ImageFilter, ImageFont, ImageOps
 from pillow_heif import register_heif_opener
 
 register_heif_opener()
@@ -37,8 +39,28 @@ CELL_W, CELL_H, BAND_H = 1600, 1200, 330  # comparison image: one cell = black l
 PAIRS_PER_ROW = 2                         # 2 pairs = 4 cells per row; raise CELL_W for a sharper (and much bigger) comparison
 
 
+SRGB = ImageCms.createProfile("sRGB")
+
+
 def load(path):
-    return ImageOps.exif_transpose(Image.open(path)).convert("RGB")
+    """Open, apply the EXIF rotation, and convert any embedded profile (iPhone: Display P3) to sRGB so colours stay
+    true once the profile is dropped. All metadata (EXIF/GPS/camera/ICC/XMP) is left behind: only pixels survive."""
+    im = Image.open(path)
+    icc = im.info.get("icc_profile")
+    im = ImageOps.exif_transpose(im)
+    if icc:
+        im = ImageCms.profileToProfile(im.convert("RGB"), ImageCms.ImageCmsProfile(io.BytesIO(icc)), SRGB, outputMode="RGB")
+    return im.convert("RGB")
+
+
+def assert_clean(path):
+    """Production check: a saved JPEG must hold no EXIF, ICC profile, XMP, comment or thumbnail - only JFIF basics."""
+    im = Image.open(path)
+    leftovers = [k for k in im.info if k not in ("jfif", "jfif_version", "jfif_unit", "jfif_density", "dpi", "progressive", "progression")]
+    raw = Path(path).read_bytes()
+    markers = [m for m in (b"Exif", b"http://ns.adobe.com/xap", b"ICC_PROFILE", b"Photoshop 3.0") if m in raw]
+    if len(im.getexif()) or leftovers or markers:
+        raise SystemExit(f"metadata found in {path}: exif={len(im.getexif())} info={leftovers} markers={markers}")
 
 
 def crop_4x3(im, cx, cy, zoom):
@@ -77,10 +99,11 @@ def process(row, event, web_dir):
         steps.append(f"resize to {WEB_WIDTH}px wide (Lanczos, {WEB_WIDTH / framed.width:.0%})")
         framed = framed.resize((WEB_WIDTH, round(framed.height * WEB_WIDTH / framed.width)), Image.LANCZOS)
     steps.append(f"sharpen: unsharp mask r{SHARPEN.radius} {SHARPEN.percent}% t{SHARPEN.threshold}")
-    steps.append("no colour change")
+    steps.append("no colour change (sRGB), all metadata removed")
     final = framed.filter(SHARPEN)
     web = web_dir / f"{name}.jpg"
-    final.save(web, quality=QUALITY, optimize=True, progressive=True)
+    final.save(web, quality=QUALITY, optimize=True, progressive=True)  # no exif=/icc_profile= passed -> nothing is written
+    assert_clean(web)
     kb, mb = web.stat().st_size / 1024, src.stat().st_size / 1024 / 1024
     print(f"{name}: {srcname} {im.width}x{im.height} ({mb:.1f} MB) -> {final.width}x{final.height} ({kb:.0f} KB)", flush=True)
     return (cell(im, [f"ORIGINAL {name}  {srcname}", f"{im.width}x{im.height} px, {mb:.1f} MB on disk"]),
@@ -111,6 +134,7 @@ def main():
         sheet.paste(f, (x + CELL_W + 8, y))
     out = WF / f"{a.event}-comparison.jpg"
     sheet.save(out, quality=82, optimize=True, progressive=True)
+    assert_clean(out)
     print(f"done: {len(rows)} images -> {web_dir}\ncomparison: {out} ({sheet.width}x{sheet.height}, {out.stat().st_size / 1e6:.1f} MB)")
 
 

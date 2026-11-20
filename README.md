@@ -15,7 +15,9 @@ jpegoptim --size=250k --strip-all *.jpg
 # Event photos
 
 Event photos are prepared with one script instead of by hand. It crops where needed (to 4:3), brings every photo to the
-same width (2400px) with a sharp resize, applies one light sharpen (no colour changes), and writes one comparison image
+same width (2400px) with a sharp resize, applies one light sharpen (no colour changes), strips all metadata (EXIF, GPS,
+camera info, colour profile; iPhone Display P3 is converted to sRGB first so colours stay true, and the script checks every
+output is clean), and writes one comparison image
 with the original next to the final of each photo (size and applied steps are printed above each).
 
 ```
