@@ -1,0 +1,13 @@
+# name	source file (in photo-workflow/originals/<event>/)	crop centre x (0-1)	crop centre y (0-1)	zoom (1 = largest 4:3 window, 0 = no crop)
+img01	DSC08159.JPG	0.5	0.5	0
+img02	DSC08001.JPG	0.5	0.64	1
+img03	DSC08118.JPG	0.5	0.57	1
+img04	IMG_6772.HEIC	0.5	0.5	1
+img05	DSC08077.JPG	0.56	0.5	0
+img06	IMG_6809.HEIC	0.5	0.5	0
+img07	IMG_1921.HEIC	0.5	0.5	0
+img08	IMG_1938.HEIC	0.5	0.5	1
+img09	IMG_1952.HEIC	0.455	0.585	0.78
+img10	IMG_2043.HEIC	0.5	0.6	1
+img11	IMG_6887.HEIC	0.5	0.5	0
+img12	IMG_6899.HEIC	0.5	0.5	0
